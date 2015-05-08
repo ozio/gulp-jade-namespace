@@ -1,8 +1,8 @@
 # gulp-jade-namespace
 
-Wrap Jade client templates with custom namespace. 
+Wrap Jade client templates with custom namespace.
 
-replace `function template(locals) {` with
+Replace `function template(locals) {` with
 
 ```js
 window["Templates"] = window["Templates"] || {};
@@ -26,7 +26,7 @@ gulp.task('client-templates', function () {
     .pipe(jade({
       client: true
     }))
-    .pipe(namespace(options))
+    .pipe(namespace())
     .pipe(gulp.dest('public/templates/'));
 });
 ```

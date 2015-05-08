@@ -14,7 +14,6 @@ function replaceJadeStarts(file, new_prefix) {
   var before_position = old_string.search('{');
   var new_string = new_prefix + old_string.slice(before_position);
 
-  console.log(new_string);
   file.contents = new Buffer(new_string)
 }
 
