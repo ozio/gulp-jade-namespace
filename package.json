@@ -1,0 +1,31 @@
+{
+  "name": "gulp-jade-namespace",
+  "version": "1.0.0",
+  "description": "Wrap compiled Jade client templates with custom namespace",
+  "keywords": [
+    "jade",
+    "js",
+    "wrap",
+    "namespace",
+    "templates",
+    "gulpplugin"
+  ],
+  "main": "index.js",
+  "author": {
+    "name": "Nikolay Solovyov",
+    "email": "i@mr-ozio.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozio/gulp-jade-namespace.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.5"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
+
+}
