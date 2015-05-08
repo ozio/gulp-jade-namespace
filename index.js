@@ -5,16 +5,16 @@ var through = require('through2');
 var err     = require('gulp-util').PluginError;
 var extend  = require('util')._extend;
 
-function getTemplateName(file){
+function getTemplateName(file) {
   return file.path.replace(file.base, '').slice(0, -3);
-};
+}
 
 function replaceJadeStarts(file, new_prefix) {
-  var old_string = file.contents.toString();
+  var old_string      = file.contents.toString();
   var before_position = old_string.search('{');
-  var new_string = new_prefix + old_string.slice(before_position);
+  var new_string      = new_prefix + old_string.slice(before_position);
 
-  file.contents = new Buffer(new_string)
+  file.contents = new Buffer(new_string);
 }
 
 function gulpNamespace(options) {
@@ -24,7 +24,7 @@ function gulpNamespace(options) {
     global:     true
   };
 
-  options = extend( defaults, options ? options : {} );
+  options = extend(defaults, options ? options : {});
 
   var variable =
         options.global
@@ -46,7 +46,7 @@ function gulpNamespace(options) {
     }
 
     if(file.isBuffer()) {
-      var template_name = getTemplateName(file)
+      var template_name   = getTemplateName(file);
       var template_prefix =
             options.compressed
               ? "" + variable + "[\"" + template_name + "\"]=function(locals)"
