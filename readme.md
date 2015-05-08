@@ -19,6 +19,7 @@ $ npm install gulp-jade-namespace --save-dev
 
 ```js
 var gulp = require('gulp');
+var jade = require('jade');
 var namespace = require('gulp-jade-namespace');
 
 gulp.task('client-templates', function () {
