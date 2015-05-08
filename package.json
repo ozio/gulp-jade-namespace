@@ -1,6 +1,6 @@
 {
   "name": "gulp-jade-namespace",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Wrap compiled Jade client templates with custom namespace",
   "keywords": [
     "jade",
