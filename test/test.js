@@ -1,25 +1,19 @@
-var fs = require('fs');
-var gutil = require('gulp-util');
-var assert = require('assert');
+var fs        = require('fs');
+var gutil     = require('gulp-util');
+var assert    = require('assert');
 var namespace = require('../');
-var should = require('should');
+var should    = require('should');
 
-/*
-* 1. Проверить имя неймспейса
-* 2. Проверить названия шаблонов
-* 3. Проверить глобальную переменную
-* */
-
-var root_content = fs.readFileSync('test/fixtures/root.js');
+var root_content  = fs.readFileSync('test/fixtures/root.js');
 var inner_content = fs.readFileSync('test/fixtures/folder/inner.js');
 
 describe('gulp-jade-namespace', function() {
   it('should render js-template with default namespace', function(done) {
-    var stream = namespace();
+    var stream   = namespace();
     var fakeFile = new gutil.File({
-      base: 'test/fixtures/',
-      cwd: 'test/',
-      path: 'test/fixtures/root.js',
+      base:     'test/fixtures/',
+      cwd:      'test/',
+      path:     'test/fixtures/root.js',
       contents: root_content
     });
 
@@ -34,13 +28,13 @@ describe('gulp-jade-namespace', function() {
   });
 
   it('should render js-template with custom namespace', function(done) {
-    var stream = namespace({
+    var stream   = namespace({
       namespace: 'tpl'
     });
     var fakeFile = new gutil.File({
-      base: 'test/fixtures/',
-      cwd: 'test/',
-      path: 'test/fixtures/root.js',
+      base:     'test/fixtures/',
+      cwd:      'test/',
+      path:     'test/fixtures/root.js',
       contents: root_content
     });
 
@@ -55,11 +49,11 @@ describe('gulp-jade-namespace', function() {
   });
 
   it('should render js-template with name contains path', function(done) {
-    var stream = namespace();
+    var stream   = namespace();
     var fakeFile = new gutil.File({
-      base: 'test/fixtures/',
-      cwd: 'test/',
-      path: 'test/fixtures/folder/inner.js',
+      base:     'test/fixtures/',
+      cwd:      'test/',
+      path:     'test/fixtures/folder/inner.js',
       contents: inner_content
     });
 
@@ -74,14 +68,14 @@ describe('gulp-jade-namespace', function() {
   });
 
   it('should render js-template without global binding', function(done) {
-    var stream = namespace({
-      global: false,
+    var stream   = namespace({
+      global:    false,
       namespace: 'templates'
     });
     var fakeFile = new gutil.File({
-      base: 'test/fixtures/',
-      cwd: 'test/',
-      path: 'test/fixtures/root.js',
+      base:     'test/fixtures/',
+      cwd:      'test/',
+      path:     'test/fixtures/root.js',
       contents: root_content
     });
 
