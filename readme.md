@@ -1,6 +1,6 @@
 # gulp-jade-namespace
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 Wrap Jade client templates with custom namespace.
 
@@ -51,4 +51,5 @@ MIT © [Nikolay Solovyov](http://ozio.io)
 [downloads-image]: http://img.shields.io/npm/dm/gulp-jade-namespace.svg
 [npm-url]: https://npmjs.org/package/gulp-jade-namespace
 [npm-image]: http://img.shields.io/npm/v/gulp-jade-namespace.svg
-
+[travis-url]: https://travis-ci.org/ozio/gulp-jade-namespace
+[travis-image]: https://travis-ci.org/ozio/gulp-jade-namespace.svg?branch=1.2.3
