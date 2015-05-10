@@ -1,5 +1,7 @@
 # gulp-jade-namespace
 
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
+
 Wrap Jade client templates with custom namespace.
 
 Replace `function template(locals) {` with
