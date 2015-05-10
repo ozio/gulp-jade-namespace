@@ -47,3 +47,8 @@ gulp.task('client-templates', function () {
 ## License
 
 MIT © [Nikolay Solovyov](http://ozio.io)
+
+[downloads-image]: http://img.shields.io/npm/dm/gulp-jade-namespace.svg
+[npm-url]: https://npmjs.org/package/gulp-jade-namespace
+[npm-image]: http://img.shields.io/npm/v/gulp-jade-namespace.svg
+
