@@ -6,7 +6,10 @@ var err     = require('gulp-util').PluginError;
 var extend  = require('util')._extend;
 
 function getTemplateName(file) {
-  return file.path.replace(file.base, '').slice(0, -3);
+  var filename_without_base = file.path.replace(file.base, '');
+  return filename_without_base.search('.') > -1
+    ? filename_without_base.split('.').slice(0, -1).join('.')
+    : filename_without_base;
 }
 
 function replaceJadeStarts(file, new_prefix) {
@@ -42,7 +45,7 @@ function gulpNamespace(options) {
     }
 
     if(file.isStream()) {
-      cb(new gutil.PluginError('gulp-jade-namespace', 'Streaming not supported'));
+      cb(new err('gulp-jade-namespace', 'Streaming not supported'));
     }
 
     if(file.isBuffer()) {

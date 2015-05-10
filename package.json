@@ -20,11 +20,20 @@
     "url": "git+https://github.com/ozio/gulp-jade-namespace.git"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  },
   "dependencies": {
     "gulp-util": "^3.0.4",
     "through2": "^0.6.5"
   },
-  "engines": {
-    "node": ">= 0.10"
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jade": "^1.0.0",
+    "should": "^6.0.1",
+    "test": "^0.6.0"
   }
 }
