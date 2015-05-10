@@ -7,6 +7,8 @@ var should    = require('should');
 var root_content  = fs.readFileSync('test/fixtures/root.js');
 var inner_content = fs.readFileSync('test/fixtures/folder/inner.js');
 
+require('mocha');
+
 describe('gulp-jade-namespace', function() {
   it('should render js-template with default namespace', function(done) {
     var stream   = namespace();
